@@ -1,4 +1,4 @@
-//basic_calss_01 BubbleSort
+//basic_calss_01
 
 #include <iostream>
 #include <vector>
