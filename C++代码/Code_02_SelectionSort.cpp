@@ -1,5 +1,4 @@
-//basic_calss_01 BubbleSort
-
+//basic_calss_01 SelectionSort
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -8,25 +7,23 @@
 
 using namespace std;
 
-void bubbleSort(vector<int> &arr) //引用
+void selectionSort(vector<int> &arr)
 {
     if (arr.empty() || arr.size() < 2)
     {
         return;
     }
-    for (int e = arr.size() - 1; e > 0; e--)
+    for (int i = 0; i < arr.size() - 1; i++)
     {
-        for (int i = 0; i < e; i++)
+        int minIndex = i;
+        for (int j = i + 1; j < arr.size(); j++)
         {
-            if (arr[i] > arr[i + 1])
-            {
-                swap(arr[i], arr[i + 1]);
-            }
+            minIndex = arr[j] < arr[minIndex] ? j : minIndex;
         }
+        swap(arr[i], arr[minIndex]);
     }
 }
 
-//for test
 void comparator(vector<int> &arr)
 {
     sort(arr.begin(), arr.end());
@@ -71,7 +68,7 @@ int main()
         arr2.clear();
         generateRandomArray(maxSize, maxValue, arr1);
         arr2.assign(arr1.begin(), arr1.end());
-        bubbleSort(arr1);
+        selectionSort(arr1);
         comparator(arr2);
         if (arr1 != arr2)
         {
@@ -90,7 +87,7 @@ int main()
         arr.clear();
         generateRandomArray(maxSize, maxValue, arr);
         printArray(arr);
-        bubbleSort(arr);
+        selectionSort(arr);
         printArray(arr);
     }
     system("pause");
