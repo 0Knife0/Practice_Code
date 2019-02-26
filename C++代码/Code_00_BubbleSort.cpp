@@ -85,7 +85,7 @@ int main()
     }
     else
     {
-        cout << "Fucking fucked!" << endl;
+        cout << "Fucking fucked！" << endl;
         vector<int> arr;
         arr.clear();
         generateRandomArray(maxSize, maxValue, arr);
