@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void bubbleSort(vector<int> &arr) //ä½¿ç”¨å¼•ç”¨
+void bubbleSort(vector<int> &arr) //引用
 {
     if (arr.empty() || arr.size() < 2)
     {
