@@ -1,5 +1,4 @@
 // class_03 Array_To_Stack_Queue
-#include <string.h>
 #include <iostream>
 #include <vector>
 
