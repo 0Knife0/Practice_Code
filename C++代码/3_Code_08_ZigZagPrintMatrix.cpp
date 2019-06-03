@@ -1,4 +1,4 @@
-// class_03
+// class_03 ZigZagPrintMatrix
 #include <iostream>
 #include <vector>
 
