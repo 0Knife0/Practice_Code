@@ -1,4 +1,4 @@
-// class_03
+// class_03 PrintCommonPart
 #include <iostream>
 
 using namespace std;
