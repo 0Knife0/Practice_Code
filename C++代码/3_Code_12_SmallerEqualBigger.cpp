@@ -49,7 +49,7 @@ ListNode* listPartition2(ListNode* head, int pivot) {
     ListNode* bH = NULL;
     ListNode* bT = NULL;
     ListNode* next = NULL;
-
+    //遍历整个链表，小中大对应三个链，链在尾部
     while (head) {
         next = head->next;
         head->next = NULL;
