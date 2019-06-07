@@ -49,10 +49,10 @@ void preOrderUnRecur(TreeNode* head) {
 }
 
 void inOrderUnRecur(TreeNode* head) {
-    cout << "in-order ";
+    cout << "in-order: ";
     if (head) {
         stack<TreeNode*> tmp;
-        while (!tmp.empty() || !head) {
+        while (!tmp.empty() || head) {
             if (head) {
                 tmp.push(head);
                 head = head->left;
