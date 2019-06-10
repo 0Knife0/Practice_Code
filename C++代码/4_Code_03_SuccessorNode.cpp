@@ -8,7 +8,7 @@ struct TreeNode {
     TreeNode* left;
     TreeNode* right;
     TreeNode* parent;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x) : val(x), left(NULL), right(NULL), parent(NULL) {}
 };
 
 static TreeNode* getLefetMost(TreeNode* head) {
