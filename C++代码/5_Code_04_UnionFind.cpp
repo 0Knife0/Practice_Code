@@ -38,13 +38,13 @@ class UnionFindSet {
     bool isSameSet(string a, string b) { return findHead(a) == findHead(b); }
 
     void uni(string a, string b) {
-        if (a == null || b == null) return;
+        if (a.empty() || b.empty()) return;
         string aHead = findHead(a);
         string bHead = findHead(b);
         if (aHead != bHead) {
             int aSetSize = sizeMap[aHead];
             int bSetSize = sizeMap[bHead];
-            if (aSetSize <= betSize) {
+            if (aSetSize <= bSetSize) {
                 fatherMap.insert({aHead, bHead});
                 sizeMap.insert({bHead, aSetSize + bSetSize});
             } else {
