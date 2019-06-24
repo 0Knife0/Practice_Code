@@ -29,7 +29,8 @@ class Edge {
     Edge() {}
     Edge(int weight, Node* from, Node* to)
         : weight(weight), from(from), to(to) {}
-    ~Edge();
+    friend bool operator<(Edge a, Edge b) { return a.weight > b.weight; }
+    ~Edge() {}
 };
 
 class Graph {
