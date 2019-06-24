@@ -45,10 +45,6 @@ class UnionFind {
     }
 };
 
-struct cmp {
-    bool operator()(Edge a, Edge b) { return a.weight > b.weight; }
-};
-
 static set<Edge> kruskalMST(Graph graph) {
     UnionFind unionFind;
     vector<Node*> nodes;
@@ -56,7 +52,7 @@ static set<Edge> kruskalMST(Graph graph) {
     for (auto node : graph.nodes) nodes.push_back(node.second);
     unionFind.makeSet(nodes);
     //将边放入优先级队列，小顶堆
-    priority_queue<Edge, vector<Edge>, cmp> priorityQueue;
+    priority_queue<Edge> priorityQueue;
     for (auto edge : graph.edges) priorityQueue.push(edge);
     set<Edge> result;
     while (!priorityQueue.empty()) {
