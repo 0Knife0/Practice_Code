@@ -29,7 +29,10 @@ class Edge {
     Edge() {}
     Edge(int weight, Node* from, Node* to)
         : weight(weight), from(from), to(to) {}
-    friend bool operator<(Edge a, Edge b) { return a.weight > b.weight; }
+    //重载<运算符
+    friend bool operator<(const Edge& a, const Edge& b) {
+        return a.weight > b.weight;
+    }
     ~Edge() {}
 };
 
