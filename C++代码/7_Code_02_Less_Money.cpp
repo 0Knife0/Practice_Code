@@ -6,7 +6,7 @@
 using namespace std;
 
 int lessMoney(vector<int> arr) {
-    priority_queue<int> pQ;
+    priority_queue<int, vector<int>, greater<int> > pQ;
     for (const auto a : arr) pQ.push(a);
     int sum = 0;
     int cur = 0;
@@ -26,7 +26,7 @@ int main() {
     cout << lessMoney(arr) << endl;
     vector<int> arrForHeap = {3, 5, 2, 7, 0, 1, 6, 4};
 
-    // min heap
+    // max heap
     priority_queue<int> minQ1;
     for (int i = 0; i < arrForHeap.size(); i++) minQ1.push(arrForHeap[i]);
     while (!minQ1.empty()) {
